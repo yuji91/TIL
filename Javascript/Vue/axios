@@ -1,0 +1,8 @@
+axiosはpromiseを返す。
+
+vueファイルのdata()内で利用はできないので、data以下にmountedなどのライフサイクルフック（Railsのコールバックメソッド？）で処理を記載する。
+
+data内はFieldとしてデータを宣言する部分なので、構造体（Railsのenumの様なもの？）となる。
+構造体ではaxiosを始めdebuggerやconsole.logと言った処理は記載できない。
+
+※ enumと構造体は厳密には違う気がします。
