@@ -1,0 +1,9 @@
+作成したHelperのメソッドはViewでは自動で読み込まれるので呼び出すことができる。  
+
+Rails4まではControllerで呼び出す場合はincludeする必要があったが、Rails5からはControllerでも自動で読み込まれるようになった。  
+https://github.com/rails/rails/blob/3464cd5c288323ca115a4929d1e6b435c4afc8d4/actionpack/lib/action_controller/metal/helpers.rb#L8
+
+RSpecなどのテストコード上でHelperメソッドを使いたい場合は、別途includeする必要がある。  
+個別のファイルで記載しなくても、rails_helper.rbなどのconfigに対して`config.include ApplicationHelper`と記載できる。  
+
+ActionMailerでHelperメソッドを使いたい場合は`add_template_helper(ApplicationHelper)`と記載する必要がある。
